@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( SkyFly());
+  runApp( const SkyFly());
 }
 
-class SkyFly extends StatelessWidget {
+class SkyFly extends StatefulWidget {
   const SkyFly({Key? key}) : super(key: key);
 
+  @override
+  _SkyFlyState createState() => _SkyFlyState();
+}
 
+class _SkyFlyState extends State<SkyFly> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,19 +22,19 @@ class SkyFly extends StatelessWidget {
             children: [
               Center(
                   child: Padding(
-                padding: EdgeInsets.only(top: 70.0),
-                child: Text(
-                  'SkyFly',
-                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Colors.orangeAccent),
-                ),
-              )),
+                    padding: EdgeInsets.only(top: 70.0),
+                    child: Text(
+                      'SkyFly',
+                      style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Colors.orangeAccent),
+                    ),
+                  )),
               Center(
                 child: Padding(
                   padding: EdgeInsets.only(
                     top: 20.0,
                   ),
                   child:
-                      Text('Welcome Onboard!', style: TextStyle(fontSize: 20)),
+                  Text('Welcome Onboard!', style: TextStyle(fontSize: 20)),
                 ),
               ),
               Center(
@@ -46,19 +50,19 @@ class SkyFly extends StatelessWidget {
                   padding: EdgeInsets.only(top: 20, right: 20, left: 20),
                   child: TextField(
                     decoration:
-                        InputDecoration(hintText: 'Full name'),
+                    InputDecoration(hintText: 'Full name'),
                   ),
                 ),
               ),
-            Center(
-              child: Padding(
-                padding: EdgeInsets.only(top: 20, right: 20, left: 20),
-                child: Expanded(
-                  child: TextField(
-                    decoration:
-                    InputDecoration(hintText: 'Email address')),
-                ),)
-            ),
+              Center(
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+                    child: Expanded(
+                      child: TextField(
+                          decoration:
+                          InputDecoration(hintText: 'Email address')),
+                    ),)
+              ),
               Center(
                   child: Padding(
                     padding: EdgeInsets.only(top: 20, right: 20, left: 20),
@@ -71,9 +75,15 @@ class SkyFly extends StatelessWidget {
                     child: TextField(
                         decoration:
                         InputDecoration(hintText: 'Confirm your password')),)),
-              ElevatedButton(onPressed: (){
-                print('tes');
-              }, child: Text('Sign Up'), style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.orangeAccent)) ,),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: ElevatedButton(onPressed: (){
+                    print('tes');
+                  }, child: Text('Sign Up'), style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.orangeAccent)) ,),
+                ),
+              ),
+              Text('Or')
             ],
           ),
 
@@ -82,3 +92,4 @@ class SkyFly extends StatelessWidget {
     );
   }
 }
+
