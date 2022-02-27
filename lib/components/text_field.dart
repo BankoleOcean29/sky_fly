@@ -13,7 +13,7 @@ class CustomTextField extends StatelessWidget {
     return Center(
       child: Padding(
         padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
-        child: TextField(
+        child: TextFormField(
           style: TextStyle(color: Color(0XFFFACBA0)),
           decoration: InputDecoration(
             hintText: hintText,
