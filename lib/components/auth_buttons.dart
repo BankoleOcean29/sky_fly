@@ -13,9 +13,11 @@ class AuthButtons extends StatelessWidget{
       onPressed: onPressed,
       child:  Text(buttonText, style: const TextStyle(color: Color(0XFF4188C6))),
       style: ButtonStyle(
-          backgroundColor:
-          MaterialStateProperty.all(const Color(0XFFFACBA0)),
-      )
+          backgroundColor: MaterialStateProperty.all(const Color(0XFFFACBA0)),
+        shape: MaterialStateProperty.resolveWith<OutlinedBorder>((_) {
+          return RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20));}),
+          )
     );
   }
 }

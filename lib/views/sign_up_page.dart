@@ -7,13 +7,14 @@ import 'login_page.dart';
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
 
+  IconData? get google => null;
+
   @override
   Widget build(BuildContext context) {
-
-    return MaterialApp(
-      home: SafeArea(
+    return Scaffold(
+      body: SafeArea(
         child: Scaffold(
-          backgroundColor: const Color(0XFF3970C0),
+          backgroundColor: const Color(0XFF4188C6),
           body: ListView(
             children: [
               Center(
@@ -52,10 +53,11 @@ class SignUp extends StatelessWidget {
                       textFontWeight: FontWeight.bold),
                 ),
               ),
-
-              const Center(child: Padding(
+              const Center(
+                  child: Padding(
                 padding: EdgeInsets.only(top: 30.0),
-                child: CustomTextField(hintText: 'Full name', obscureText: false),
+                child:
+                    CustomTextField(hintText: 'Full name', obscureText: false),
               )),
               const Center(
                 child: Padding(
@@ -82,7 +84,8 @@ class SignUp extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 30.0),
                   child: SizedBox(
-                    // width: MediaQuery.of(context).size.width,
+                    width: 367,
+                    height: 52,
                     child: AuthButtons(
                       onPressed: () {},
                       buttonText: 'Sign Up',
@@ -95,36 +98,36 @@ class SignUp extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: AuthTitleText(
                       text: 'OR',
-                      textColor: Color(0XFFFACBA0),
+                      textColor: Colors.white,
                       textFontSize: 18,
                       textFontWeight: FontWeight.bold),
                 ),
               ),
               Center(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10.0, right: 40, left: 40),
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: const [
-                          Icon(Icons.login, size: 25,),
-                          Text('Sign in with Google'),
-
-                        ],
-                      )),
+                child: Expanded(
+                  child: Container(
+                    color: Colors.white,
+                    width: 188,
+                    height: 47,
+                    child: Row(
+                      children: [
+                        Icon(google),
+                        const Text('Sign In Google'),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 100.0),
-                child: Row(
-                  children: [
-                    AuthTextButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (_) => const Login()));
-                    },
-                      text: ('login'),
-                    )
-                  ],
-                ),
+              Row(
+                children: [
+                  const Text('Already have an account?'),
+                  TextButton(onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder:(context) =>
+                    Login()));
+                  //Get.to(Login());
+                  },
+                child: const Text('Login', style: TextStyle(color: Colors.brown,),),
+                  )],
               )
             ],
           ),
@@ -132,5 +135,4 @@ class SignUp extends StatelessWidget {
       ),
     );
   }
-
 }
