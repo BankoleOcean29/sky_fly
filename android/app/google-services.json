@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "89869677215",
+    "project_id": "sky-fly-1bf8d",
+    "storage_bucket": "sky-fly-1bf8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89869677215:android:98f96192bbab7aae9b28aa",
+        "android_client_info": {
+          "package_name": "com.example.sky_fly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89869677215-928u4ul40qjutov255lqq6c860jef5kj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sky_fly",
+            "certificate_hash": "786cf6e40cca9b6187b8c59caf8e87b225cbb3cf"
+          }
+        },
+        {
+          "client_id": "89869677215-4bg3n2iui9m0jimkm76tsf8107qb1deh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkeau2AlU-nXTg-rbSuSY7cCQAQGMB9nE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89869677215-4bg3n2iui9m0jimkm76tsf8107qb1deh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

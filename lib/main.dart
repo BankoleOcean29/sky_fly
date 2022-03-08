@@ -1,13 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:sky_fly/views/flight_selection.dart';
-import 'package:sky_fly/views/login_page.dart';
-import 'package:sky_fly/views/sign_up_page.dart';
-import 'package:sky_fly/views/test.dart';
+import 'package:sky_fly/screens/sign_up_page.dart';
 
-void main() {
+void main() async {
+ WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp();
   runApp( const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: FlightSelectionPage()));
+    home: SkyFly()));
 }
 
 class SkyFly extends StatelessWidget {
@@ -16,7 +16,7 @@ class SkyFly extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SignUp(),
     );
   }
